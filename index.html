@@ -145,7 +145,7 @@
 
     function getRandomImagePath() {
       const imagePaths = [
-        'images/bounce-smoosh2.gif',
+      'images/bounce-smoosh2.gif',
         'images/schema_.gif',
         'images/IMG_9012.GIF',
         'images/ladybug gif.gif',
@@ -164,6 +164,38 @@
         'images/worm looping.gif',
         'images/BRAIN SPINNING.gif',
         'images/1638461553.698818 copy.jpg',
+        'images/mushroomswing.jpeg',
+	      'images/Computer_Screen_08.png',
+        'images/twopeoplegradient.png',
+        'images/Yellow_star.png',
+        'images/heartobj2x.png',
+        'images/twin_dragons.png',
+        'images/color blobs.png',
+        'images/kaiba warp planet.jpg',
+        'images/theambassadors.jpg',
+        'images/rafiasworld.jpg',
+        'images/ai_grass lawn.png',
+        'images/ai_Sky_02.png',
+        'images/Designer_Chair_UV_Layout.png',
+        'images/GreenWood_Albedo.png',
+        'images/lemon dish (16).png',
+        'images/spacewarp thru room.png',
+        'images/striped normal map.png',
+        'images/Tex_0264_0.png',
+        'images/0f06Kfq.jpg',
+        'images/metal floor 1857.jpg',
+        'images/2.jpg',
+        'images/3dgifmaker70997.gif',
+        'images/7-2.jpg',
+        'images/138267.jpg',
+        'images/1089990.png',
+        'images/2017-03-13-09-05-57.jpg',
+        'images/307823158.jpg',
+        'images/A2sqF0U3QycmT7ZaG1As.jpg',
+        'images/loud speech drop shadow.png',
+        'images/Screen Shot Fake Photoshop.png',
+        'images/music clip art.png',
+        'images/BangOlfsen.png',
       ];
 
       const randomIndex = Math.floor(Math.random() * imagePaths.length);
@@ -217,7 +249,7 @@
 
       const content2 = document.createElement('div');
       content2.className = 'scrollable-content';
-      content2.innerHTML = '<p style="margin: 7.5px; text-align: left; font-size: 10px;">Over the past year or two, my concern for the rapid growth of data technologies and its impact on creatives has grown correspondingly. We’re at a confusing crossroads between these technologies and art, and we’ve reached the point where we are able to see its effects; both the negative and positive. With this in mind, I wonder how the evolving landscape of data algorithms, influenced by large corporations and AI, alters the creative process and expression of artists and designers? </p>';
+      content2.innerHTML = '<p style="margin: 7.5px; text-align: left; font-size: 9px;">Over the past year or two, my concern for the rapid growth of data technologies and its impact on creatives has grown correspondingly. We’re at a confusing crossroads between these technologies and art, and we’ve reached the point where we are able to see its effects; both the negative and positive. With this in mind, I wonder how the evolving landscape of data algorithms, influenced by large corporations and AI, alters the creative process and expression of both artists and designers.</p>';
       section2.appendChild(content2);
 
       // Button to reveal Section 21
@@ -244,7 +276,7 @@
 
       const content21 = document.createElement('div');
       content21.className = 'scrollable-content';
-      content21.innerHTML = '<p style="margin: 7.5px; text-align: left; font-size: 10px;">Different text for Section 21...  </p>';
+      content21.innerHTML = '<p style="font-family: IBM Plex Mono, sans-serif; font-size: 9px; margin: 7.5px;">Recommendation Data Systems in a Nutshell:</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">All online recommendation systems are created for capitalistic gain. Corporations such as Google and Meta take mass user data and compile it into algorithms which in turn is used to feed users "recommended" content. These algorithms impact the way people receive information from social media, search engines, and other media consumption websites and companies. There are many visible downsides to this process such as a lack of privacy, echo chambers, redundancies, and more. Pre-algorithmic internet provided users with a lot less external constraint. There weren’t incessant ads crammed into your search results, and there wasn’t an artificial intelligence data masterminding it. In 2023, over 30% of all the content shown on Meta social media platforms (Instagram, Facebook) is recommended using AI algorithms.</p>';
       section21.appendChild(content21);
 
       // Button to reveal Section 22 (hypothetical)
@@ -253,7 +285,117 @@
       button21.textContent = '>';
       section21.appendChild(button21);
 
+      button21.onclick = function() {
+        section22.style.display = 'block';
+      };
+      
+ // Section 22 (Hidden Section)
+ const section22 = document.createElement('div');
+      section22.className = 'hidden-section';
+      section22.style.width = '150px';
+      section22.style.height = '150px';
+      const position22 = getRandomPosition();
+      section22.style.left = position22.left;
+      section22.style.top = position22.top;
+      container.appendChild(section22);
 
+      makeDraggable(section22);
+
+      const content22 = document.createElement('div');
+      content22.className = 'scrollable-content';
+      content22.innerHTML = '<p style="font-family: IBM Plex Mono, sans-serif; font-size: 9px; margin: 7.5px;">Idea Echo Chambers:</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">These AI algorithms "personalize" information to show users more of what they have previously engaged with. This has significant repercussions to creative thought and innovation. The algorithms work on a low-risk profit-hungry system of recommendation. Social media platforms and search engines deliberately lump users into homogenized recommendation networks, and avoid showing users new or different content.Thus, limiting exposure to new ideas, aesthetics, and opinions. This deliberate selection of content can suppress original thought and inspiration, which more often occurs from chance and random interactions with novel, unexpected information + media.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;"> "We are in the middle of a very strange sort of natural selection that’s trying to curate in favour of creativity and "being different", but in actual fact is doing the completely homogenous opposite. There is no inspiration from ‘something different’ if all of the ‘something different’ is the same something!" (Thein 2019)</p>';
+      section22.appendChild(content22);
+
+      // Button to reveal Section 23 (hypothetical)
+      const button22 = document.createElement('button');
+      button22.className = 'section-button';
+      button22.textContent = '>';
+      section22.appendChild(button22);
+
+      button22.onclick = function() {
+        section23.style.display = 'block';
+      };
+
+ // Section 23 (Hidden Section)
+ const section23 = document.createElement('div');
+      section23.className = 'hidden-section';
+      section23.style.width = '150px';
+      section23.style.height = '150px';
+      const position23 = getRandomPosition();
+      section23.style.left = position23.left;
+      section23.style.top = position23.top;
+      container.appendChild(section23);
+
+      makeDraggable(section23);
+
+      const content23 = document.createElement('div');
+      content23.className = 'scrollable-content';
+      content23.innerHTML = '<p style="font-family: IBM Plex Mono, sans-serif; font-size: 9px; margin: 7.5px;">Losing Freedom on the Internet:</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">In the earlier days of the internet post-2000, the flow of information from computer to user was a lot less confined and directed. This was before the internet became predominately controlled by a few large companies (Amazon, Alphabet, Meta) and before the rise of machine learning data systems. Now, search engines will limit results, push sponsored websites, and cater to search engine optimized websites (SEOs).</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">Addressing SEOs: "To get to the top [of search results], you didn’t have to make high-quality content! You could select some keywords for your product and hire low-cost copywriters to churn out many articles optimized for SEO. They’d create long articles with irrelevant information and full of keywords that help their clients rank their websites on the first page of Google. That’s why nowadays some pages on Google search results are full of useless information." (Andrede 2023)</p><p style="margin: 7.5px; text-align: left; font-size: 9px;"> The internet was previously a lot less homogenized, with more websites that focused on specific forms of content and information. It was messy, but it was full of independently operated websites and useful sources of information. This differs from the internet today, where the mainstream corporatized websites consolidate everything into one space. The popularity of platforms such as YouTube and Facebook, have allowed these mega-corporations to digitally monopolize aspects of the internet. It is still possible to roam the internet "freely", however it isn’t getting easier.</p>';
+      section23.appendChild(content23);
+
+      // Button to reveal Section 24 (hypothetical)
+      const button23 = document.createElement('button');
+      button23.className = 'section-button';
+      button23.textContent = '>';
+      section23.appendChild(button23);
+
+      button23.onclick = function() {
+        section24.style.display = 'block';
+      };
+
+       // Section 24 (Hidden Section)
+ const section24 = document.createElement('div');
+      section24.className = 'hidden-section';
+      section24.style.width = '150px';
+      section24.style.height = '150px';
+      const position24 = getRandomPosition();
+      section24.style.left = position24.left;
+      section24.style.top = position24.top;
+      container.appendChild(section24);
+
+      makeDraggable(section24);
+
+      const content24 = document.createElement('div');
+      content24.className = 'scrollable-content';
+      content24.innerHTML = '<p style="font-family: IBM Plex Mono, sans-serif; font-size: 9px; margin: 7.5px;">Alternative Media Platforms:</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">Despite the confinements of the modern age internet, it can still be incredibly useful for creatives. Now more than ever, the importance of forums and alterantive media platforms is becoming increasingly apparent. Independent forums operate away from SEOs and algorithmic recommendations, and allow users to involve themselves with specific communities. Creatives should work to discover and engage with these types of platforms as they are often sources of information and inspiration without the sway of mega-corporations.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">Are.na is an alternative media platform that engages with the concepts of early internet. It allows a space where users can freely upload and browse media, whilst curating their own independent or collaborative spaces. The platform does not display ads, nor does it offer any sort of monetization. It is a pure form of social media, void of data-gathering recommendations, but full of inspiration and innovation. This sort of platform is a stepping stone into the ideas of a decentralized internet, a Web 3.0.</p>';
+      section24.appendChild(content24);
+
+      // Button to reveal Section 24 (hypothetical)
+      const button24 = document.createElement('button');
+      button24.className = 'section-button';
+      button24.textContent = '>';
+      section24.appendChild(button24);
+
+      button24.onclick = function() {
+        section25.style.display = 'block';
+      };
+
+             // Section 25 (Hidden Section)
+ const section25 = document.createElement('div');
+      section25.className = 'hidden-section';
+      section25.style.width = '150px';
+      section25.style.height = '150px';
+      const position25 = getRandomPosition();
+      section25.style.left = position25.left;
+      section25.style.top = position25.top;
+      container.appendChild(section25);
+
+      makeDraggable(section25);
+
+      const content25 = document.createElement('div');
+      content25.className = 'scrollable-content';
+      content25.innerHTML = '<p style="font-family: IBM Plex Mono, sans-serif; font-size: 9px; margin: 7.5px;">Uh oh.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">It looks like whoever made this project (Henry Farr) bit off more than he could chew and did not actually finish it in time… That is super awkward and also unfortunate. In place of the lack thereof the rest of this project, I will now list reasons why Henry should possibly get a decent to good grade.</p><p style="font-family: IBM Plex Mono, sans-serif; margin: 7.5px; text-align: left; font-size: 9px;">1. He tried really hard.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">- It took him a long time to come up with a fitting visual concept for his thesis and by the time he created one, it was a bit too late. It turns out coding a website takes a lot of time… In the time allotted, he tried very hard to finish it, but he also didn’t want to half-ass it. Alas.</p><p style="font-family: IBM Plex Mono, sans-serif; margin: 7.5px; text-align: left; font-size: 9px;">2. It looks cool.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">- Proof of concept is there. And it looks cool. It may have strayed a bit from the “Research Project” instructions, but I mean, what good art doesn’t deviate from structure?</p><p style="font-family: IBM Plex Mono, sans-serif; margin: 7.5px; text-align: left; font-size: 9px;">3. He vows to continue working on it.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">- Although it was not necessarily finished in time (12/17/23, 11:59PM) he will definitely continue work on it! Since it’s a website, it can be updated and changed overtime. He will also update you when it is more complete.</p><p style="font-family: IBM Plex Mono, sans-serif; margin: 7.5px; text-align: left; font-size: 9px;">4. He doesn’t want to fail this class.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">- I’m not great at math, but I’m pretty sure if I get a bad grade here I would effectively fail this course, which would not be ideal. Not that I wouldn’t take this class again, because it was actually very insightful and educating, but in terms of like the overall affect that having to retake it would have on my future college curriculum (and my mind), would be potentially devastating.</p><p style="font-family: IBM Plex Mono, sans-serif; margin: 7.5px; text-align: left; font-size: 9px;">5. I can’t really think of a fifth one. I just wanted to make it a nice list of five.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">- But I’m sure there are many other reasons why Henry could receive a decent grade. So, perhaps think on that…</p><p style="font-family: IBM Plex Mono, sans-serif; margin: 7.5px; text-align: left; font-size: 9px;">OK. Thank you. Sorry.</p>';
+      section25.appendChild(content25);
+
+      // Button to reveal Section 24 (hypothetical)
+      const button25 = document.createElement('button');
+      button25.className = 'section-button';
+      button25.textContent = '>';
+      section25.appendChild(button25);
+
+      button25.onclick = function() {
+        section26.style.display = 'block';
+      };
 
       // Section 3 (Additional Section)
       const section3 = document.createElement('div');
@@ -369,6 +511,7 @@
       const txtFileLink = 'bibliography.txt';
       window.open(txtFileLink, '_blank');
     }
+    
   </script>
 
 <div class="ticker-container">
