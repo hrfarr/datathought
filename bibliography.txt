@@ -1,0 +1,17 @@
+works cited
+
+Andrade, Frank. “Why Google Search Isn’t so Useful Anymore.” Medium, Geek Culture, 20 Feb. 2023, medium.com/geekculture/why-google-search-isnt-so-useful-anymore-76692b8abbd. 
+
+Brooks, Ruth. “Ai Search and Recommendation Algorithms.” University of York, 17 Aug. 2023, online.york.ac.uk/ai-search-and-recommendation-algorithms/. 
+
+Laranjo, Francisco. “Automated Graphic Design.” Modes of Criticism, 10 Jan. 2017, modesofcriticism.org/automated-graphic-design/. 
+
+Laranjo, Francisco. “Delusion &amp; Data-Driven Design.” Creative Review, 1 Nov. 2017, www.creativereview.co.uk/delusion-data-driven-design/. 
+
+Powers, Jessica. “An In-Depth Guide to How Recommender Systems Work.” Built In, 2 Mar. 2023, builtin.com/data-science/recommender-systems. 
+
+Tait, Amelia. “How Algorithms Took Creativity out of Social Media.” WIRED UK, WIRED UK, 17 May 2021, www.wired.co.uk/article/social-media-human-curation. 
+
+Thein, Ming. “Social Media Algorithms Are Limiting Creativity and Subliminally Controlling Your World View.” Ming Thein, 9 June 2019, blog.mingthein.com/2019/06/07/social-media-algorithms/. 
+
+Witten, Ian H. “Bias, Privacy, and Personalization on the Web.” Department of Computer Science, University of Waikato, New Zealand, July 2007, www.cs.waikato.ac.nz/~ihw/papers/07-IHW-Bias,privacyonweb.pdf. 
