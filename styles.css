@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'WorkSans-Thin';
+  src: url('fonts/WorkSans-Thin.ttf') format('ttf');
+  /* You can add additional font formats here, such as woff2, ttf, or otf */
+}
+
+@font-face {
+  font-family: 'IBMPlexMono-Light';
+  src: url('fonts/IBMPlexMono-Light.ttf') format('ttf');
+  /* You can add additional font formats here, such as woff2, ttf, or otf */
+}
+
+.draggable-section {
+  /* Your existing styles here */
+  font-family: 'IBMPlexMono-Light', sans-serif;
+  /* font-style: italic; */
+  
+}
+
+
+body {
+    background-color: white;
+
+  }
+  h1 {
+    color: black;
+    font-family: 'WorkSans-Thin', sans-serif;
+    font-weight: lighter;
+    /* font-style: italic; */
+  }
+  p {
+    color: black;
+    
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  
+  /* .container div {
+    /* Additional styling for the div elements */
+  /* } * */

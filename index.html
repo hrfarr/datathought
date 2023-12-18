@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Image in Draggable Section</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @font-face {
+      font-family: 'WorkSans-Thin';
+      src: url('fonts/WorkSans-Thin.ttf') format('ttf');
+    }
+
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .draggable-section {
+      font-family: 'IBMPlexMono-Light', sans-serif;
+      position: absolute;
+      border: 1.5px solid #000000;
+      background-color: #ffffff;
+      cursor: grab;
+    }
+
+    h1 {
+      font-family: 'WorkSans-Thin';
+      font-size: calc(4.5vh + 4.5vw);
+      margin: 0;
+      padding: 1%;
+    }
+
+    .file-button {
+      font-family: 'IBMPlexMono-Light', sans-serif;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: #ffffff;
+      border: 1.5px solid #000000;
+      color: #000000;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    img {
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+
+    .scrollable-content {
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .ticker-container {
+      background-color: #000000;
+      font-family: 'IBMPlexMono', sans-serif;
+      font-size: 10px;
+      color: #ffffff;
+      padding: 1px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .ticker-content {
+      display: inline-block;
+      animation: ticker-scroll 20s infinite linear;
+    }
+
+    @keyframes ticker-scroll {
+      0% {
+        transform: translateX(100vw);
+      }
+      100% {
+        transform: translateX(-100vw);
+      }
+    }
+
+    /* New styles for button and hidden section */
+    .section-button {
+      font-family: 'IBMPlexMono', sans-serif;
+      font-size: 10px;
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      background-color: #ffffffcc;
+      border: 1px solid #000000;
+      border-radius: 5px;
+      color: #000000;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .hidden-section {
+      display: none;
+      font-family: 'IBMPlexMono-Light', sans-serif;
+      position: absolute;
+      border: 1.5px solid #000000;
+      background-color: #ffffff;
+      cursor: grab;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="font-family: 'WorkSans-Thin'; text-align: justify; padding: 1%;">how does the evolving landscape of data algorithms, influenced by large corporations and AI, alter the creative process and expression of artists and designers?</h1>
+
+  <button class="file-button" onclick="openTxtFile()">> bibliography</button>
+
+  <script>
+    function makeDraggable(element) {
+      let offsetX, offsetY, isDragging = false;
+
+      element.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        offsetX = e.clientX - element.getBoundingClientRect().left;
+        offsetY = e.clientY - element.getBoundingClientRect().top;
+        element.style.cursor = 'grabbing';
+      });
+
+      document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+          element.style.left = e.clientX - offsetX + 'px';
+          element.style.top = e.clientY - offsetY + 'px';
+        }
+      });
+
+      document.addEventListener('mouseup', () => {
+        isDragging = false;
+        element.style.cursor = 'grab';
+      });
+    }
+
+    function getRandomImagePath() {
+      const imagePaths = [
+        'images/bounce-smoosh2.gif',
+        'images/schema_.gif',
+        'images/IMG_9012.GIF',
+      ];
+
+      const randomIndex = Math.floor(Math.random() * imagePaths.length);
+      return imagePaths[randomIndex];
+    }
+
+    function getRandomPosition() {
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+
+      const left = Math.floor(Math.random() * (windowWidth - 150));
+      const top = Math.floor(Math.random() * (windowHeight - 150));
+
+      return { left: `${left}px`, top: `${top}px` };
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.body;
+
+      // Section 1
+      const section1 = document.createElement('div');
+      section1.className = 'draggable-section';
+      section1.style.width = '150px';
+      section1.style.height = '150px';
+      const position1 = getRandomPosition();
+      section1.style.left = position1.left;
+      section1.style.top = position1.top;
+      container.appendChild(section1);
+
+      makeDraggable(section1);
+
+      const image1 = document.createElement('img');
+      image1.src = getRandomImagePath();
+      image1.alt = 'Random Image';
+      image1.style.width = '100%';
+      image1.style.height = '100%';
+      image1.draggable = false;
+      section1.appendChild(image1);
+
+      // Section 2
+      const section2 = document.createElement('div');
+      section2.className = 'draggable-section';
+      section2.style.width = '150px';
+      section2.style.height = '150px';
+      const position2 = getRandomPosition();
+      section2.style.left = position2.left;
+      section2.style.top = position2.top;
+      container.appendChild(section2);
+
+      makeDraggable(section2);
+
+      const content2 = document.createElement('div');
+      content2.className = 'scrollable-content';
+      content2.innerHTML = '<p style="margin: 7.5px; text-align: left; font-size: 10px;">Over the past year or two, my concern for the rapid growth of data technologies and its impact on creatives has grown correspondingly. We’re at a confusing crossroads between these technologies and art, and we’ve reached the point where we are able to see its effects; both the negative and positive.</p>';
+      section2.appendChild(content2);
+
+      // Button to reveal Section 21
+      const button2 = document.createElement('button');
+      button2.className = 'section-button';
+      button2.textContent = ' > ';
+      section2.appendChild(button2);
+
+      button2.onclick = function() {
+        section21.style.display = 'block';
+      };
+
+      // Section 21 (Hidden Section)
+      const section21 = document.createElement('div');
+      section21.className = 'hidden-section';
+      section21.style.width = '150px';
+      section21.style.height = '150px';
+      const position21 = getRandomPosition();
+      section21.style.left = position21.left;
+      section21.style.top = position21.top;
+      container.appendChild(section21);
+
+      makeDraggable(section21);
+
+      const content21 = document.createElement('div');
+      content21.className = 'scrollable-content';
+      content21.innerHTML = '<p style="margin: 7.5px; text-align: left; font-size: 10px;">Different text for Section 21...  </p>';
+      section21.appendChild(content21);
+
+      // Button to reveal Section 22 (hypothetical)
+      const button21 = document.createElement('button');
+      button21.className = 'section-button';
+      button21.textContent = '>';
+      section21.appendChild(button21);
+
+
+
+      // Section 3 (Additional Section)
+      const section3 = document.createElement('div');
+      section3.className = 'draggable-section';
+      section3.style.width = '150px';
+      section3.style.height = '150px';
+      const position3 = getRandomPosition();
+      section3.style.left = position3.left;
+      section3.style.top = position3.top;
+      container.appendChild(section3);
+
+      makeDraggable(section3);
+
+      const image3 = document.createElement('img');
+      image3.src = getRandomImagePath();
+      image3.alt = 'Random Image';
+      image3.style.width = '100%';
+      image3.style.height = '100%';
+      image3.draggable = false;
+      section3.appendChild(image3);
+
+      // Section 5 (Additional Image Section)
+      const section5 = document.createElement('div');
+      section5.className = 'draggable-section';
+      section5.style.width = '150px';
+      section5.style.height = '150px';
+      const position5 = getRandomPosition();
+      section5.style.left = position5.left;
+      section5.style.top = position5.top;
+      container.appendChild(section5);
+
+      makeDraggable(section5);
+
+      const image5 = document.createElement('img');
+      image5.src = getRandomImagePath();
+      image5.alt = 'Random Image';
+      image5.style.width = '100%';
+      image5.style.height = '100%';
+      image5.draggable = false;
+      section5.appendChild(image5);
+
+      // Section 4 (User Input Section)
+      const section4 = document.createElement('div');
+      section4.className = 'draggable-section';
+      section4.style.width = '150px';
+      section4.style.height = '150px';
+      const position4 = getRandomPosition();
+      section4.style.left = position4.left;
+      section4.style.top = position4.top;
+      container.appendChild(section4);
+
+      makeDraggable(section4);
+
+      const content4 = document.createElement('div');
+
+      const title4 = document.createElement('p');
+      title4.textContent = 'Search Bar';
+      title4.style.margin = '5px';
+      title4.style.fontFamily = 'IBMPlexMono';
+      content4.appendChild(title4);
+
+      const userInput = document.createElement('textarea');
+      userInput.placeholder = 'type something here...';
+      userInput.style.fontSize = '10px';
+      userInput.style.fontFamily = 'IBMPlexMono-Light';
+      userInput.style.marginTop = '5px';
+      userInput.style.marginLeft = '5px';
+      userInput.style.marginRight = '5px';
+      userInput.style.borderColor = 'black';
+      userInput.style.width = '134px';
+      userInput.style.height = '75px';
+      userInput.style.resize = 'none';
+
+      const alertButton = document.createElement('button');
+      alertButton.style.fontFamily = 'IBMPlexMono-Light';
+      alertButton.style.marginLeft = '36px';
+      alertButton.style.borderRadius = '5px';
+      alertButton.style.backgroundColor = 'white';
+      alertButton.style.borderColor = 'black';
+      alertButton.style.borderWidth = '1px';
+      alertButton.textContent = '> search';
+      
+      alertButton.onclick = function() {
+        userInput.value = '';
+        const textOutputs = [
+          'Something redundant',
+          'Something non-specific',
+          //add more search alerts//  
+        ];
+
+        const randomIndex = Math.floor(Math.random() * textOutputs.length);
+        alert(textOutputs[randomIndex]);
+      };
+
+      content4.appendChild(userInput);
+      content4.appendChild(alertButton);
+
+      section4.appendChild(content4);
+    });
+
+    function openTxtFile() {
+      const txtFileLink = 'bibliography.txt';
+      window.open(txtFileLink, '_blank');
+    }
+  </script>
+
+<div class="ticker-container">
+  <div class="ticker-content">
+    <!-- Add your breaking news headlines here -->
+    <span>Breaking News: Your data is used to confine you – Your online information is commercialized – Your search engines are shopping districts</span>
+    <!-- Add more headlines as needed -->
+  </div>
+</div>
+
+</body>
+</html>
