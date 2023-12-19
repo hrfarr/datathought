@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
+    <title>auto-learner</title>
+    <link href="/styles.css">
+    <link rel="shortcut icon" href="dt_favicon.ico" sizes="256x256">
+</head>
+<body>
+    <div id="wiki-content" style="height: 98vh;">
+        <!-- Wikipedia content will be displayed here -->
+        <!--<div id="image-overlay">-->
+        <!--    <img src="/auto-learner_border.png" alt="Overlay Image">-->
+        <!--</div>-->
+    </div>
+    <script>
+        // Function to load a random existing Wikipedia page
+        function loadRandomWikipediaPage() {
+            // Construct the Wikipedia page URL for a random existing page
+            const wikipediaURL = "https://en.wikipedia.org/wiki/Special:Random";
+
+            // Set the content of the "wiki-content" div to display the page
+            document.getElementById('wiki-content').innerHTML = `<iframe src="${wikipediaURL}" width="100%" height="100%"></iframe>`;
+        }
+
+        // Function to generate a random time interval between 1 to 10 seconds (1000ms to 10000ms)
+        function getRandomInterval() {
+            return Math.floor(Math.random() * (15000 - 3000 + 1)) + 3000; // Random value between 1000ms (1 second) and 10000ms (10 seconds)
+        }
+
+        // Function to periodically load a random Wikipedia page with a random interval
+        function startRandomPageInterval() {
+            loadRandomWikipediaPage(); // Load a page immediately
+
+            // Load a new random page with a new random interval each time
+            function loadNewRandomPage() {
+                loadRandomWikipediaPage();
+                setTimeout(loadNewRandomPage, getRandomInterval());
+            }
+            
+            // Start the initial interval
+            setTimeout(loadNewRandomPage, getRandomInterval());
+        }
+
+        // Call the startRandomPageInterval function when the page loads
+        window.addEventListener('load', startRandomPageInterval);
+    </script>
+</body>
+</html>

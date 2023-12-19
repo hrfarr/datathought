@@ -14,6 +14,12 @@
   /* You can add additional font formats here, such as woff2, ttf, or otf */
 }
 
+@font-face {
+  font-family: 'IBMPlexMono-Regular';
+src: url('fonts/IBMPlexMono-Regular.woff') format('woff');
+src: url('fonts/IBMPlexMono-Regular.woff2') format('woff2');
+}
+
 .draggable-section {
   /* Your existing styles here */
   font-family: 'IBMPlexMono-Light', sans-serif;
