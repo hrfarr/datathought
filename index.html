@@ -3,13 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>datathought</title>
+  <title>Random Image in Draggable Section</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="shortcut icon" href="dt_favicon.ico" sizes="256x256">
   <style>
     @font-face {
       font-family: 'WorkSans-Thin';
       src: url('fonts/WorkSans-Thin.ttf') format('ttf');
+      src: url('fonts/WorkSans-Thin.woff') format('woff');
+  src: url('fonts/WorkSans-Thin.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'IBMPlexMono-Light';
+  src: url('fonts/IBMPlexMono-Light.ttf') format('ttf');
+  src: url('fonts/IBMPlexMono-Light.woff') format('woff');
+  src: url('fonts/IBMPlexMono-Light.woff2') format('woff2');
     }
 
     body, html {
@@ -64,7 +71,7 @@
 
     .ticker-container {
       background-color: #000000;
-      font-family: 'IBMPlexMono', sans-serif;
+      font-family: 'IBMPlexMono-Light', sans-serif;
       font-size: 10px;
       color: #ffffff;
       padding: 1px;
@@ -92,7 +99,7 @@
 
     /* New styles for button and hidden section */
     .section-button {
-      font-family: 'IBMPlexMono', sans-serif;
+      font-family: 'IBMPlexMono-Light', sans-serif;
       font-size: 10px;
       position: absolute;
       bottom: 5px;
@@ -455,7 +462,8 @@
       const title4 = document.createElement('p');
       title4.textContent = 'Search Bar';
       title4.style.margin = '5px';
-      title4.style.fontFamily = 'IBMPlexMono';
+      title4.style.fontFamily = 'IBMPlexMono-Light';
+      title4.style.fontWeight = '1000';
       content4.appendChild(title4);
 
       const userInput = document.createElement('textarea');
