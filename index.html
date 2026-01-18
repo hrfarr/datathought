@@ -403,33 +403,6 @@
         section25.style.display = 'block';
       };
 
-             // Section 25 (Hidden Section)
- const section25 = document.createElement('div');
-      section25.className = 'hidden-section';
-      section25.style.width = '150px';
-      section25.style.height = '150px';
-      const position25 = getRandomPosition();
-      section25.style.left = position25.left;
-      section25.style.top = position25.top;
-      container.appendChild(section25);
-
-      makeDraggable(section25);
-
-      const content25 = document.createElement('div');
-      content25.className = 'scrollable-content';
-      content25.innerHTML = '<p style="font-family: IBMPlexMono-Regular, sans-serif; font-size: 9px; margin: 7.5px;">Uh oh.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">It looks like whoever made this project (Henry Farr) bit off more than he could chew and did not actually finish it in time… That is super awkward and also unfortunate. In place of the lack thereof the rest of this project, I will now list reasons why Henry should possibly get a decent to good grade.</p><p style="font-family: IBMPlexMono-Regular, sans-serif; margin: 7.5px; text-align: left; font-size: 9px;">1. He tried really hard.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">- It took him a long time to come up with a fitting visual concept for his thesis and by the time he created one, it was a bit too late. It turns out coding a website takes a lot of time… In the time allotted, he tried very hard to finish it, but he also didn’t want to half-ass it. Alas.</p><p style="font-family: IBMPlexMono-Regular, sans-serif; margin: 7.5px; text-align: left; font-size: 9px;">2. It looks cool.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">- Proof of concept is there. And it looks cool. It may have strayed a bit from the “Research Project” instructions, but I mean, what good art doesn’t deviate from structure?</p><p style="font-family: IBMPlexMono-Regular, sans-serif; margin: 7.5px; text-align: left; font-size: 9px;">3. He vows to continue working on it.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">- Although it was not necessarily finished in time (12/17/23, 11:59PM) he will definitely continue work on it! Since it’s a website, it can be updated and changed overtime. He will also update you when it is more complete.</p><p style="font-family: IBMPlexMono-Regular, sans-serif; margin: 7.5px; text-align: left; font-size: 9px;">4. He doesn’t want to fail this class.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">- I’m not great at math, but I’m pretty sure if I get a bad grade here I would effectively fail this course, which would not be ideal. Not that I wouldn’t take this class again, because it was actually very insightful and educating, but in terms of like the overall affect that having to retake it would have on my future college curriculum (and my mind), would be potentially devastating.</p><p style="font-family: IBMPlexMono-Regular, sans-serif; margin: 7.5px; text-align: left; font-size: 9px;">5. I can’t really think of a fifth one. I just wanted to make it a nice list of five.</p><p style="margin: 7.5px; text-align: left; font-size: 9px;">- But I’m sure there are many other reasons why Henry could receive a decent grade. So, perhaps think on that…</p><p style="font-family: IBMPlexMono-Regular, sans-serif; margin: 7.5px; text-align: left; font-size: 9px;">OK. Thank you. Sorry.</p>';
-      section25.appendChild(content25);
-
-      // Button to reveal Section 24 (hypothetical)
-      // const button25 = document.createElement('button');
-      // button25.className = 'section-button';
-      // button25.textContent = '>';
-      // section25.appendChild(button25);
-
-      // button25.onclick = function() {
-      //   section26.style.display = 'block';
-      // };
-
       // Section 3 (Additional Section)
       const section3 = document.createElement('div');
       section3.className = 'draggable-section';
@@ -514,20 +487,19 @@
       alertButton.onclick = function() {
         userInput.value = '';
         const textOutputs = [
-        'Something you already knew',
-        'Something sponsored',
-        'Something they want you to see',
-        'Something you don’t want',
-        'Something other than that',
-        'Something you just saw',
-        'Something you keep seeing',
-        'Something recommended',
-        'Something wrong',
-        'Something unimportant',
-        'Something else',
-        'Something the same as before',
-        'Something you saw 2 years ago',
-          //add more search alerts//  
+        'Result: Something you already knew',
+        'Result: Something sponsored',
+        'Result: Something they want you to see',
+        'Result: Something you don’t want',
+        'Result: Something other than that',
+        'Result: Something you just saw',
+        'Result: Something you keep seeing',
+        'Result: Something recommended',
+        'Result: Something wrong',
+        'Result: Something unimportant',
+        'Result: Something else',
+        'Result: Something the same as before',
+        'Result: Something you saw 2 years ago',
         ];
 
         const randomIndex = Math.floor(Math.random() * textOutputs.length);
